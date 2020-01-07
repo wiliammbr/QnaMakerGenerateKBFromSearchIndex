@@ -21,7 +21,7 @@
         {
             return string.Concat(Question, "\t", Answer, "\t",
                 Source, "\t", Metadata, "\t", Suggested, "\t", IsContext,
-                "\t", Prompts, "\t", QnaId);
+                "\t", Prompts, "\t", QnaId).Replace("\\\\\\\\n", "\\n").Replace(@"\\\"", "");
         }
     }
 }
